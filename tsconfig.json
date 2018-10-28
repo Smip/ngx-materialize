@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@Smip/ngx-materialize": [
+        "dist/smip/ngx-materialize"
+      ],
+      "@Smip/ngx-materialize/*": [
+        "dist/smip/ngx-materialize/*"
+      ]
+    }
   }
 }

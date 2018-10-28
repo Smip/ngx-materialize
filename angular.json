@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/materialize-css/dist/js/materialize.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +121,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@Smip/ngx-materialize": {
+      "root": "projects/smip/ngx-materialize",
+      "sourceRoot": "projects/smip/ngx-materialize/src",
+      "projectType": "library",
+      "prefix": "m",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/smip/ngx-materialize/tsconfig.lib.json",
+            "project": "projects/smip/ngx-materialize/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/smip/ngx-materialize/src/test.ts",
+            "tsConfig": "projects/smip/ngx-materialize/tsconfig.spec.json",
+            "karmaConfig": "projects/smip/ngx-materialize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/smip/ngx-materialize/tsconfig.lib.json",
+              "projects/smip/ngx-materialize/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

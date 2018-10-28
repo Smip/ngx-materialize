@@ -1,21 +1,244 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    </ul>
+  </div>
+</nav>
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <h2>Buttons</h2>
+  <a class="waves-effect waves-light btn">button</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
 
+  <h2>Collapsible</h2>
+  <h3>Accordion</h3>
+  <ul class="collapsible" mCollapsible>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+  <h3>Expandable</h3>
+  <ul class="collapsible" [mCollapsible]="{'accordion': false}">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+  <h2>Dropdown</h2>
+  <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1' mDropdown>Drop Me!</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul>
+  <h2>FeatureDiscovery</h2>
+  <a class="waves-effect waves-light btn" (click)="openTapTarget()">open</a>
+  <a class="waves-effect waves-light btn" (click)="closeTapTarget()">close</a>
+  <div class="fixed-action-btn">
+    <a id="menu" class="waves-effect waves-light btn btn-floating"><i class="material-icons">menu</i></a>
+  </div>
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-target="menu" mTapTarget (mInstance)="mTapTargetInstance = $event;">
+    <div class="tap-target-content">
+      <h5>Title</h5>
+      <p>A bunch of text</p>
+    </div>
+  </div>
+  <h2>Material Box</h2>
+  <img class="materialboxed" width="650" src="https://materializecss.com/images/sample-1.jpg" mMaterialbox>
+  <h2>Slider</h2>
+  <div class="slider" mSlider>
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <h2>Modals</h2>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal" mModal>
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  <h2>Scroll spy</h2>
+  <div class="row">
+    <div class="col s12 m9 l10">
+      <div id="introduction" class="section scrollspy" mScrollSpy>
+        <p>Content </p>
+      </div>
+
+      <div id="structure" class="section scrollspy" mScrollSpy>
+        <p>Content </p>
+      </div>
+
+      <div id="initialization" class="section scrollspy" mScrollSpy>
+        <p>Content </p>
+      </div>
+    </div>
+    <div class="col hide-on-small-only m3 l2">
+      <ul class="section table-of-contents">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#initialization">Intialization</a></li>
+      </ul>
+    </div>
+  </div>
+  <h2>Sidenav</h2>
+  <ul id="slide-out" class="sidenav" mSidenav>
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="https://materializecss.com/images/office.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="https://materializecss.com/images/yuna.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect waves-light btn"><i
+    class="material-icons left">menu</i> open</a>
+  <h2>Tabs</h2>
+  <ul id="tabs-swipe-demo" class="tabs" [mTabs]="{'swipeable': true}">
+    <li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
+    <li class="tab col s3"><a class="active" href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+  </ul>
+  <div class="tabs-content carousel carousel-slider" mCarousel>
+    <div id="test-swipe-1" class="col s12 blue">Test 1</div>
+    <div id="test-swipe-2" class="col s12 red">Test 2</div>
+    <div id="test-swipe-3" class="col s12 green">Test 3</div>
+  </div>
+  <h2>Toast</h2>
+  <a class="waves-effect waves-light btn" (click)="toast({'html': 'I am a toast!'})">Toast!</a>
+  <h2>Tooltips</h2>
+  <div class="row">
+    <div class="col s4 offset-s4 l2 offset-l1">
+      <a class="btn" mTooltip data-html="true" data-position="bottom" data-tooltip="I am a tooltip">Bottom</a>
+    </div>
+    <div class="col s4 offset-s4 l2 offset-l1">
+      <a class="btn" mTooltip data-position="top" data-tooltip="I am a tooltip"> Top</a>
+    </div>
+    <div class="col s4 offset-s4 l2 offset-l1">
+      <a class="btn" mTooltip data-position="left" data-tooltip="I am a tooltip"> Left</a>
+    </div>
+    <div class="col s4 offset-s4 l2 offset-l1">
+      <a class="btn" mTooltip data-position="right" data-tooltip="I am a tooltip"> Right</a>
+    </div>
+  </div>
+  <h2>Autocomplete</h2>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="autocomplete-input" class="autocomplete" [mAutocomplete]="{'data':autocompliteData}">
+          <label for="autocomplete-input">Autocomplete</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Chips</h2>
+  In process
+  <h2>Datepicker</h2>
+  <input type="text" mDatepicker>
+  <h2>Timepicker</h2>
+  <input type="text" mTimepicker>
+  <h2>Select</h2>
+  <div class="input-field col s12 m6">
+    <select class="icons" mFormSelect>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="" data-icon="https://materializecss.com/images/sample-1.jpg">example 1</option>
+      <option value="" data-icon="https://materializecss.com/images/office.jpg">example 2</option>
+      <option value="" data-icon="https://materializecss.com/images/yuna.jpg">example 3</option>
+    </select>
+    <label>Images in select</label>
+  </div>
+  <h2>Text Inputs</h2>
+  <div class="row">
+    <div class="input-field col s6">
+      <input value="Alvin" id="first_name2" type="text" class="validate">
+      <label for="first_name2">First Name</label>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea">Lorem ipsum dolor sit amet, alia vocent meliore ius ad, mea graeco evertitur et. Eos ad case labitur iuvaret, at ius alia nonumes, illud aperiam adipisci et eum. Et pro discere docendi indoctum, ad duo discere postulant. Option propriae duo id. Tota graeco molestiae pri ex. Sit malorum instructior comprehensam et, falli novum vis ad. Nullam cetero blandit cum ea, te option audire percipit eos.</textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
