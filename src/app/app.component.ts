@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    toast({html: 'Toast!'});
   }
 
   openTapTarget() {

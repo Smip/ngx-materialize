@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
-import {NgxMaterializeModule} from '@Smip/ngx-materialize';
+import {NgxMaterialize} from '@Smip/ngx-materialize';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import {NgxMaterializeModule} from '@Smip/ngx-materialize';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxMaterializeModule
+    NgxMaterialize
   ],
   providers: [],
   bootstrap: [AppComponent]

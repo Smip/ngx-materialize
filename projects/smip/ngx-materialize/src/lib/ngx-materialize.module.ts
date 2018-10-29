@@ -40,5 +40,5 @@ const M_MODULES = [
   declarations: M_MODULES,
   exports: M_MODULES
 })
-export class NgxMaterializeModule {
+export class NgxMaterialize {
 }
