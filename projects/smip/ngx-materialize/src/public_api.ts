@@ -16,9 +16,9 @@ export function toast(...args) {
 }
 
 export function updateTextFields(...args) {
-  M.updateTextFields(...args);
+  setTimeout(() => M.updateTextFields(...args), 0);
 }
 
 export function textareaAutoResize(...args) {
-  M.textareaAutoResize(...args);
+  setTimeout(() => M.textareaAutoResize(...args), 0);
 }
