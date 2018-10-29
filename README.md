@@ -46,11 +46,11 @@ import {NgxMaterialize} from '@Smip/ngx-materialize';
 })
 ```
 
-##Usage
+## Usage
 
 Library supports:
 
-###Directives:
+### Directives:
 
 To initialize any component add relevant directive to your element with prefix `m`, for example: **Tooltip** > `mTooltip`
 
@@ -132,7 +132,7 @@ Add directive `[mAutocomplete]="{'data':autocompliteData}"`
 
 
 
-###Functions:
+### Functions:
 
 - toast
 ```
@@ -172,6 +172,6 @@ export class AppComponent implements OnInit {
 ## Issues
 If you have questions or issues feel free to create new an topic in [issues](https://github.com/Smip/ngx-materialize/issues).
 
-##License
+## License
 
 Licensed under [MIT](https://opensource.org/licenses/MIT).
