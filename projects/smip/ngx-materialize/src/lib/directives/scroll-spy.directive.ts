@@ -23,6 +23,8 @@ export class ScrollSpyDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.instances.destroy();
+    if (this.instances) {
+      this.instances.destroy();
+    }
   }
 }

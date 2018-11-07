@@ -1,12 +1,14 @@
 {
   "name": "@smip/ngx-materialize",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "One more materialize wrapper for Angular 6",
   "keywords": [
     "angular 6",
     "angular6",
     "materialize",
-    "materialize-css"
+    "materialize-css",
+    "ngx-materialize",
+    "ng2-materialize"
   ],
   "author": "Aleksandr Sokolov <sokolov.aleksandr@yahoo.com>",
   "license": "MIT",

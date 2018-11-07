@@ -20,19 +20,19 @@ Install Ngx-Materialize:
 
 `npm i -S @smip/ngx-materialize`
 
-Add `"./node_modules/materialize-css/dist/js/materialize.js"` to your **angular.json** file in section **scripts**
+Add `"~materialize-css/dist/js/materialize.js"` to your **angular.json** file in section **scripts**
 
-Add `"./node_modules/materialize-css/dist/css/materialize.css"` to your **angular.json** file in section **styles** 
+Add `"~materialize-css/dist/css/materialize.css"` to your **angular.json** file in section **styles** 
 
 **or**
 
-If you use scss add to your styles.scss `@import '../node_modules/materialize-css/sass/materialize.scss';`
+If you use scss add to your styles.scss `@import '~materialize-css/sass/materialize.scss';`
 
 
 Add NgxMaterialize import to your module:
 
 ```
-import {NgxMaterialize} from '@Smip/ngx-materialize';
+import {NgxMaterialize} from '@smip/ngx-materialize';
 
 ...
 
@@ -137,7 +137,7 @@ Add directive `[mAutocomplete]="{'data':autocompliteData}"`
 - toast
 ```
 import {Component, OnInit} from '@angular/core';
-import {toast} from '@Smip/ngx-materialize';
+import {toast} from '@smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {
@@ -148,7 +148,7 @@ export class AppComponent implements OnInit {
 - updateTextFields
 ```
 import {Component, OnInit} from '@angular/core';
-import {updateTextFields} from '@Smip/ngx-materialize';
+import {updateTextFields} from '@smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {
@@ -159,7 +159,7 @@ export class AppComponent implements OnInit {
 - textareaAutoResize
 ```
 import {Component, OnInit} from '@angular/core';
-import {textareaAutoResize} from '@Smip/ngx-materialize';
+import {textareaAutoResize} from '@smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {

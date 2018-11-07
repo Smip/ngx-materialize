@@ -23,6 +23,8 @@ export class CarouselDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.instances.destroy();
+    if (this.instances) {
+      this.instances.destroy();
+    }
   }
 }
