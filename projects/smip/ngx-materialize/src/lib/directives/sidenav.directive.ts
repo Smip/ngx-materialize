@@ -24,6 +24,7 @@ export class SidenavDirective implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     if (this.instances) {
+      this.instances.close();
       this.instances.destroy();
     }
   }

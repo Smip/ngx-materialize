@@ -8,7 +8,9 @@ declare const M: any;
 export class ScrollSpyDirective implements OnInit, OnDestroy {
   @Input('mScrollSpy') mScrollSpy: object;
   @Output() mInstance = new EventEmitter();
-  options = {};
+  options = {
+    'getActiveElement': (id) => 'a[href$="#' + id + '"]'
+  };
   instances: any;
 
   constructor(private element: ElementRef) {

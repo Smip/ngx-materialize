@@ -104,7 +104,53 @@ Add directive `[mAutocomplete]="{'data':autocompliteData}"`
 
 - ScrollSpy
 
-`mScrollSpy`
+This directive works only with angular 6.1+, reed more by [link](https://stackoverflow.com/a/52724769) 
+
+Default options getActiveElement was changed to:
+```
+'getActiveElement': (id) => 'a[href$="#' + id + '"]'
+```
+
+Add options `anchorScrolling: 'enabled'` to your RouterModule:
+
+```
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot([], {
+      anchorScrolling: 'enabled'
+    })
+  ],
+  exports: [RouterModule],
+  declarations: []
+})
+
+export class AppRoutingModule {
+}
+```
+
+Add directive `mScrollSpy` to your sections:
+
+```
+<div id="introduction" class="section" mScrollSpy>
+  <p>Content </p>
+</div>
+
+<div id="structure" class="section" mScrollSpy>
+  <p>Content </p>
+</div>
+```
+
+Add links:
+
+```
+<ul class="section table-of-contents">
+  <li><a [routerLink]="[]" fragment="introduction">Introduction</a></li>
+  <li><a [routerLink]="[]" fragment="structure">Structure</a></li>
+</ul>
+```
 
 - Sidenav
 

@@ -1,10 +1,11 @@
 {
   "name": "ngx-materialize",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href=\"/ngx-materialize/dist/ngx-materialize/\"",
+    "build:lib": "ng build --project @Smip/ngx-materialize",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,7 +21,7 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "@smip/ngx-materialize": "0.0.2",
+    "@smip/ngx-materialize": "0.0.5",
     "core-js": "^2.5.4",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.2.0",
