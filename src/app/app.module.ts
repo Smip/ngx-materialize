@@ -5,15 +5,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 
 import {NgxMaterialize} from '@Smip/ngx-materialize';
+import {FormsModule} from '@angular/forms';
+import {ParallaxComponent} from './parallax/parallax.component';
+import {MainComponent} from './main/main.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParallaxComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgxMaterialize
+    FormsModule,
+    NgxMaterialize,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

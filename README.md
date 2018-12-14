@@ -94,6 +94,38 @@ Add directive `[mAutocomplete]="{'data':autocompliteData}"`
 
 `mFormSelect`
 
+If you use select in ngModel or Reactive Forms and the value in the field dynamically changes from the component, after changes value you should update the view using `this.mFormSelectInstance.update();`
+
+HTML:
+```
+  <div class="input-field col s12 m6">
+    <select class="icons" mFormSelect (mInstance)="mFormSelectInstance = $event" [(ngModel)]="mFormSelect">
+      <option value="" disabled selected>Choose your option</option>
+      <option value="1" data-icon="https://materializecss.com/images/sample-1.jpg">example 1</option>
+      <option value="2" data-icon="https://materializecss.com/images/office.jpg">example 2</option>
+      <option value="3" data-icon="https://materializecss.com/images/yuna.jpg">example 3</option>
+    </select>
+    <label>Images in select</label>
+  </div>
+```
+
+Component:
+```
+import {Component, OnInit} from '@angular/core';
+
+export class AppComponent implements OnInit {
+  mFormSelectInstance;
+  mFormSelect= '';
+  ngOnInit(): {
+    setTimeout(() => {
+      this.mFormSelect = 2;
+      this.mFormSelectInstance.update();
+    }, 4000);
+  }
+}
+
+```
+
 - Materialbox
 
 `mMaterialbox`
@@ -103,33 +135,6 @@ Add directive `[mAutocomplete]="{'data':autocompliteData}"`
 `mModal`
 
 - ScrollSpy
-
-This directive works only with angular 6.1+, reed more by [link](https://stackoverflow.com/a/52724769) 
-
-Default options getActiveElement was changed to:
-```
-'getActiveElement': (id) => 'a[href$="#' + id + '"]'
-```
-
-Add options `anchorScrolling: 'enabled'` to your RouterModule:
-
-```
-import {NgModule} from '@angular/core';
-import {RouterModule} from '@angular/router';
-
-@NgModule({
-  imports: [
-    RouterModule.forRoot([], {
-      anchorScrolling: 'enabled'
-    })
-  ],
-  exports: [RouterModule],
-  declarations: []
-})
-
-export class AppRoutingModule {
-}
-```
 
 Add directive `mScrollSpy` to your sections:
 
@@ -141,15 +146,6 @@ Add directive `mScrollSpy` to your sections:
 <div id="structure" class="section" mScrollSpy>
   <p>Content </p>
 </div>
-```
-
-Add links:
-
-```
-<ul class="section table-of-contents">
-  <li><a [routerLink]="[]" fragment="introduction">Introduction</a></li>
-  <li><a [routerLink]="[]" fragment="structure">Structure</a></li>
-</ul>
 ```
 
 - Sidenav
@@ -176,7 +172,25 @@ Add links:
 
 `mTooltip`
 
+- Parallax
 
+`mParallax`
+
+HTML:
+
+```
+<div class="parallax-container">
+  <div class="parallax" mParallax><img src="https://materializecss.com/images/parallax1.jpg"></div>
+</div>
+<div class="row">
+  <div class="col s12">
+    <h2>Some block</h2>
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="parallax" mParallax><img src="https://materializecss.com/images/parallax2.jpg"></div>
+</div>
+```
 
 ### Functions:
 
@@ -198,18 +212,33 @@ import {updateTextFields} from '@smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {
-    updateTextFields();
+    setTimeout(() => {
+       updateTextFields();
+    }, 0);
   }
 }
 ```
 - textareaAutoResize
+
+HTML:
+```
+<textarea id="textarea1" #textarea class="materialize-textarea">Lorem ipsum dolor sit amet, alia vocent meliore ius ad, mea graeco evertitur et. Eos ad case labitur iuvaret, at ius alia nonumes, illud aperiam adipisci et eum. Et pro discere docendi indoctum, ad duo discere postulant. Option propriae duo id. Tota graeco molestiae pri ex. Sit malorum instructior comprehensam et, falli novum vis ad. Nullam cetero blandit cum ea, te option audire percipit eos.</textarea>
+```
+
+Component:
+
 ```
 import {Component, OnInit} from '@angular/core';
 import {textareaAutoResize} from '@smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
+  
+  @ViewChild('textarea') textarea: ElementRef;
+  
   ngOnInit(): {
-    textareaAutoResize();
+    setTimeout(() => {
+      textareaAutoResize(this.textarea.nativeElement);
+    }, 0);
   }
 }
 ```

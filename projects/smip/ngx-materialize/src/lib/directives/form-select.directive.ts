@@ -15,8 +15,9 @@ export class FormSelectDirective implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    Object.assign(this.options, this.mFormSelect);
+    M.FormSelect.prototype.update = this.update.bind(this);
     setTimeout(() => {
-      Object.assign(this.options, this.mFormSelect);
       this.instances = M.FormSelect.init(this.element.nativeElement, this.options);
       this.mInstance.emit(this.instances);
     }, 0);
@@ -27,4 +28,13 @@ export class FormSelectDirective implements OnInit, OnDestroy {
       this.instances.destroy();
     }
   }
+
+  update() {
+    this.instances.destroy();
+    setTimeout(() => {
+      this.instances = M.FormSelect.init(this.element.nativeElement, this.options);
+      this.mInstance.emit(this.instances);
+    }, 0);
+  }
+
 }

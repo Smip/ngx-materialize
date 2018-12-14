@@ -15,6 +15,7 @@ import {ScrollSpyDirective} from './directives/scroll-spy.directive';
 import {AutocompleteDirective} from './directives/autocomplete.directive';
 import {ChipsDirective} from './directives/chips.directive';
 import {TimepickerDirective} from './directives/timepicker.directive';
+import {ParallaxDirective} from './directives/parallax.directive';
 
 const M_MODULES = [
   TooltipDirective,
@@ -32,7 +33,8 @@ const M_MODULES = [
   ScrollSpyDirective,
   AutocompleteDirective,
   ChipsDirective,
-  TimepickerDirective
+  TimepickerDirective,
+  ParallaxDirective
 ];
 
 @NgModule({
