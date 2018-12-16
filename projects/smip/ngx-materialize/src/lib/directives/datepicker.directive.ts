@@ -1,4 +1,4 @@
-import {Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {Directive, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output} from '@angular/core';
 
 declare const M: any;
 
@@ -26,5 +26,9 @@ export class DatepickerDirective implements OnInit, OnDestroy {
     if (this.instances) {
       this.instances.destroy();
     }
+  }
+
+  @HostListener('change') dateChanges() {
+    this.element.nativeElement.dispatchEvent(new CustomEvent('input'));
   }
 }
