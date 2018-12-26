@@ -176,6 +176,10 @@ Add directive `mScrollSpy` to your sections:
 
 `mParallax`
 
+- Pushpin
+
+`mPushpin`
+
 HTML:
 
 ```

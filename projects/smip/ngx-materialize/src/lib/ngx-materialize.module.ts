@@ -16,6 +16,7 @@ import {AutocompleteDirective} from './directives/autocomplete.directive';
 import {ChipsDirective} from './directives/chips.directive';
 import {TimepickerDirective} from './directives/timepicker.directive';
 import {ParallaxDirective} from './directives/parallax.directive';
+import {PushpinDirective} from './directives/pushpin.directive';
 
 const M_MODULES = [
   TooltipDirective,
@@ -34,7 +35,8 @@ const M_MODULES = [
   AutocompleteDirective,
   ChipsDirective,
   TimepickerDirective,
-  ParallaxDirective
+  ParallaxDirective,
+  PushpinDirective
 ];
 
 @NgModule({

@@ -1,10 +1,12 @@
 {
   "name": "@smip/ngx-materialize",
-  "version": "0.1.1",
-  "description": "One more materialize wrapper for Angular 6",
+  "version": "0.2.0",
+  "description": "One more materialize wrapper for Angular 6+",
   "keywords": [
     "angular 6",
+    "angular 7",
     "angular6",
+    "angular7",
     "materialize",
     "materialize-css",
     "ngx-materialize",
