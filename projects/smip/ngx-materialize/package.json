@@ -1,7 +1,7 @@
 {
   "name": "@smip/ngx-materialize",
-  "version": "0.2.0",
-  "description": "One more materialize wrapper for Angular 6+",
+  "version": "0.2.2",
+  "description": "One more materialize wrapper for Angular",
   "keywords": [
     "angular 6",
     "angular 7",
@@ -23,7 +23,8 @@
     "url": "https://github.com/Smip/ngx-materialize/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": ">=6.0.0 || >=7.0.0",
+    "@angular/core": ">=6.0.0 || >=7.0.0",
+    "materialize-css": "^1.0.0"
   }
 }

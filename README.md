@@ -20,9 +20,9 @@ Install Ngx-Materialize:
 
 `npm i -S @smip/ngx-materialize`
 
-Add `"~materialize-css/dist/js/materialize.js"` to your **angular.json** file in section **scripts**
+Add `"./node_modules/materialize-css/dist/js/materialize.js"` to your **angular.json** file in section **scripts**
 
-Add `"~materialize-css/dist/css/materialize.css"` to your **angular.json** file in section **styles** 
+Add `"./node_modules/materialize-css/dist/css/materialize.css"` to your **angular.json** file in section **styles** 
 
 **or**
 
