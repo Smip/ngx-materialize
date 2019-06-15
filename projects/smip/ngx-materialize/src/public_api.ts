@@ -1,15 +1,14 @@
 /*
  * Public API Surface of ngx-materialize
  */
-
 export * from './lib/ngx-materialize.module';
 
+declare var M: any;
+
 if (!('M' in window)) {
-  throw new Error('Couldn\'t find M object on window. It is created by the materialize-css library.' +
+  console.warn('Couldn\'t find M object on window. It is created by the materialize-css library.' +
     ' Please import materialize-css before importing ngx-materialize.');
 }
-
-declare var M: any;
 
 export function toast(...args) {
   M.toast(...args);

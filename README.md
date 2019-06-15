@@ -4,9 +4,9 @@
 
 One more materialize wrapper for Angular
 
-Support [materializecss.com](https://materializecss.com) for Angular 6 without jquery
+Support [materializecss.com](https://materializecss.com) for Angular without jquery
 
-The library tested and successfully works with  materialize-css version 1.0.0-rc.2 and Angular 6.1.0
+The library tested and successfully works with materialize-css version 1.0.0 and Angular 6 & 7 & 8
 
 ## [Demo](https://smip.github.io/ngx-materialize/dist/ngx-materialize)
 
@@ -14,7 +14,7 @@ The library tested and successfully works with  materialize-css version 1.0.0-rc
 
 Install materialize
 
-` npm install materialize-css@next --save`
+`npm i -S materialize-css`
 
 Install Ngx-Materialize:
 
