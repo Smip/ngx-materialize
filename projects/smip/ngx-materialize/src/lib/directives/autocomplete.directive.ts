@@ -1,5 +1,6 @@
 import {Directive, ElementRef, EventEmitter, HostListener, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
+import {AutocompleteInstance, AutocompleteOptions} from '../types';
 
 declare const M: any;
 
@@ -7,10 +8,10 @@ declare const M: any;
   selector: '[mAutocomplete]'
 })
 export class AutocompleteDirective implements OnInit, OnDestroy {
-  @Input() mAutocomplete: object;
-  @Output() mInstance = new EventEmitter();
-  options = {};
-  instances: any;
+  @Input() mAutocomplete: AutocompleteOptions;
+  @Output() mInstance: EventEmitter<AutocompleteInstance> = new EventEmitter();
+  options: AutocompleteOptions = {};
+  instances: AutocompleteInstance;
 
   constructor(
     private element: ElementRef,

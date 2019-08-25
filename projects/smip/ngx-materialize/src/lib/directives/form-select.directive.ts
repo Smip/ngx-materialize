@@ -1,5 +1,7 @@
 import {Directive, ElementRef, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
+import {FormSelectInstance, FormSelectOptions} from '../types';
+
 
 declare const M: any;
 
@@ -7,14 +9,14 @@ declare const M: any;
   selector: '[mFormSelect]'
 })
 export class FormSelectDirective implements OnInit, OnDestroy {
-  @Input() mFormSelect: object;
-  @Output() mInstance = new EventEmitter();
-  options = {};
-  instances: any;
+  @Input() mFormSelect: FormSelectOptions;
+  @Output() mInstance: EventEmitter<FormSelectInstance> = new EventEmitter();
+  options: FormSelectOptions = {};
+  instances: FormSelectInstance;
 
   constructor(
     private element: ElementRef,
-    @Inject(PLATFORM_ID) private platform: Object
+    @Inject(PLATFORM_ID) private platform: Object,
   ) {
   }
 
@@ -29,6 +31,7 @@ export class FormSelectDirective implements OnInit, OnDestroy {
     }
   }
 
+
   ngOnDestroy(): void {
     if (this.instances) {
       this.instances.destroy();
@@ -36,10 +39,11 @@ export class FormSelectDirective implements OnInit, OnDestroy {
   }
 
   update() {
-    this.instances.destroy();
-    setTimeout(() => {
-      this.instances = M.FormSelect.init(this.element.nativeElement, this.options);
-    }, 0);
+    if (this.instances) {
+      setTimeout(() => {
+        this.instances = M.FormSelect.init(this.element.nativeElement, this.options);
+      }, 0);
+    }
   }
 
 }

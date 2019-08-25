@@ -46,6 +46,21 @@ import {NgxMaterialize} from '@smip/ngx-materialize';
 })
 ```
 
+## Types
+
+Library has defined types to next elements:
+
+- Toast
+- AutocompleteOptions
+- DropdownOptions
+- FormSelectOptions
+- DropdownInstance
+- FormSelectInstance
+- AutocompleteInstance
+- ...
+
+In plans add types to every directive.
+
 ## Usage
 
 Library supports:
@@ -112,9 +127,10 @@ HTML:
 Component:
 ```
 import {Component, OnInit} from '@angular/core';
+import {FormSelectInstance} from '@Smip/ngx-materialize';
 
 export class AppComponent implements OnInit {
-  mFormSelectInstance;
+  mFormSelectInstance: FormSelectInstance;
   mFormSelect= '';
   ngOnInit(): {
     setTimeout(() => {

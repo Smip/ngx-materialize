@@ -1,5 +1,6 @@
 import {Directive, ElementRef, EventEmitter, Inject, Input, OnDestroy, OnInit, Output, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
+import {DropdownInstance, DropdownOptions} from '../types';
 
 declare const M: any;
 
@@ -7,10 +8,10 @@ declare const M: any;
   selector: '[mDropdown]'
 })
 export class DropdownDirective implements OnInit, OnDestroy {
-  @Input() mDropdown: object;
-  @Output() mInstance = new EventEmitter();
-  options = {};
-  instances: any;
+  @Input() mDropdown: DropdownOptions;
+  @Output() mInstance: EventEmitter<DropdownInstance> = new EventEmitter();
+  options: DropdownOptions = {};
+  instances: DropdownInstance;
 
   constructor(
     private element: ElementRef,

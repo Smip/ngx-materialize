@@ -1,11 +1,12 @@
 {
   "name": "ngx-materialize",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href=\"/ngx-materialize/dist/ngx-materialize/\"",
     "build:lib": "ng build --project @Smip/ngx-materialize",
+    "publish": "cd dist/smip/ngx-materialize && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
