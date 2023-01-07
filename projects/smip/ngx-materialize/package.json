@@ -1,14 +1,18 @@
 {
   "name": "@smip/ngx-materialize",
-  "version": "0.3.0",
-  "description": "One more materialize wrapper for Angular",
+  "version": "0.4.0",
+  "description": "One more materialize wrapper for Angular (forked from smip/ngx-materialize)",
   "keywords": [
-    "angular 6",
-    "angular 7",
-    "angular 8",
-    "angular6",
+    "angular",
     "angular7",
     "angular8",
+    "angular9",
+    "angular10",
+    "angular11",
+    "angular12",
+    "angular13",
+    "angular14",
+    "angular15",
     "materialize",
     "materialize-css",
     "ngx-materialize",
@@ -25,8 +29,8 @@
     "url": "https://github.com/Smip/ngx-materialize/issues"
   },
   "peerDependencies": {
-    "@angular/common": ">=6.0.0 || >=7.0.0 || >=8.0.0",
-    "@angular/core": ">=6.0.0 || >=7.0.0 || >=8.0.0",
-    "materialize-css": "^1.0.0"
+    "@angular/common": ">=6.0.0 || >=7.0.0 || >=8.0.0 || >=9.0.0 || >=10.0.0 || >=11.0.0 || >=12.0.0 || >=13.0.0 || >=14.0.0 || >=15.0.0",
+    "@angular/core": ">=6.0.0 || >=7.0.0 || >=8.0.0 || >=9.0.0 || >=10.0.0 || >=11.0.0 || >=12.0.0 || >=13.0.0 || >=14.0.0 || >=15.0.0",
+    "@materializecss/materialize": "^1.2.1"
   }
 }

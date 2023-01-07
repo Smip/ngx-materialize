@@ -22,9 +22,9 @@
     "@angular/platform-browser-dynamic": "^8.0.1",
     "@angular/platform-server": "^8.0.1",
     "@angular/router": "^8.0.1",
+    "@materializecss/materialize": "^1.2.1",
     "@smip/ngx-materialize": "file:dist/smip/ngx-materialize",
     "core-js": "^3.1.4",
-    "materialize-css": "^1.0.0",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
     "zone.js": "~0.9.1"
