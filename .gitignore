@@ -2,6 +2,7 @@
 
 # compiled output
 /dist/smip
+/dist/steinv
 /tmp
 /out-tsc
 

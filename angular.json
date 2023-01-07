@@ -135,38 +135,38 @@
         }
       }
     },
-    "@Smip/ngx-materialize": {
-      "root": "projects/smip/ngx-materialize",
-      "sourceRoot": "projects/smip/ngx-materialize/src",
+    "@steinv/ngx-materialize": {
+      "root": "projects/steinv/ngx-materialize",
+      "sourceRoot": "projects/steinv/ngx-materialize/src",
       "projectType": "library",
       "prefix": "m",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/smip/ngx-materialize/tsconfig.lib.json",
-            "project": "projects/smip/ngx-materialize/ng-package.json"
+            "tsConfig": "projects/steinv/ngx-materialize/tsconfig.lib.json",
+            "project": "projects/steinv/ngx-materialize/ng-package.json"
           }
         ,          "configurations": {
             "production": {
-              "tsConfig": "projects/smip/ngx-materialize/tsconfig.lib.prod.json"
+              "tsConfig": "projects/steinv/ngx-materialize/tsconfig.lib.prod.json"
             }
           }
 },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/smip/ngx-materialize/src/test.ts",
-            "tsConfig": "projects/smip/ngx-materialize/tsconfig.spec.json",
-            "karmaConfig": "projects/smip/ngx-materialize/karma.conf.js"
+            "main": "projects/steinv/ngx-materialize/src/test.ts",
+            "tsConfig": "projects/steinv/ngx-materialize/tsconfig.spec.json",
+            "karmaConfig": "projects/steinv/ngx-materialize/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/smip/ngx-materialize/tsconfig.lib.json",
-              "projects/smip/ngx-materialize/tsconfig.spec.json"
+              "projects/steinv/ngx-materialize/tsconfig.lib.json",
+              "projects/steinv/ngx-materialize/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

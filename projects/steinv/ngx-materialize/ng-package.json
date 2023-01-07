@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/smip/ngx-materialize",
+  "dest": "../../../dist/steinv/ngx-materialize",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

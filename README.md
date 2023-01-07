@@ -18,7 +18,7 @@ Install materialize
 
 Install Ngx-Materialize:
 
-`npm i -S @smip/ngx-materialize`
+`npm i -S @steinv/ngx-materialize`
 
 Add `"./node_modules/materialize-css/dist/js/materialize.js"` to your **angular.json** file in section **scripts**
 
@@ -32,7 +32,7 @@ If you use scss add to your styles.scss `@import '~materialize-css/sass/material
 Add NgxMaterialize import to your module:
 
 ```
-import {NgxMaterialize} from '@smip/ngx-materialize';
+import {NgxMaterialize} from '@stein/ngx-materialize';
 
 ...
 
@@ -127,7 +127,7 @@ HTML:
 Component:
 ```
 import {Component, OnInit} from '@angular/core';
-import {FormSelectInstance} from '@Smip/ngx-materialize';
+import {FormSelectInstance} from '@steinv/ngx-materialize';
 
 export class AppComponent implements OnInit {
   mFormSelectInstance: FormSelectInstance;
@@ -217,7 +217,7 @@ HTML:
 - toast
 ```
 import {Component, OnInit} from '@angular/core';
-import {toast} from '@smip/ngx-materialize';
+import {toast} from '@steinv/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {
@@ -228,7 +228,7 @@ export class AppComponent implements OnInit {
 - updateTextFields
 ```
 import {Component, OnInit} from '@angular/core';
-import {updateTextFields} from '@smip/ngx-materialize';
+import {updateTextFields} from '@steinv/ngx-materialize';
 
 export class AppComponent implements OnInit {
   ngOnInit(): {
@@ -249,7 +249,7 @@ Component:
 
 ```
 import {Component, OnInit} from '@angular/core';
-import {textareaAutoResize} from '@smip/ngx-materialize';
+import {textareaAutoResize} from '@steinv/ngx-materialize';
 
 export class AppComponent implements OnInit {
   
@@ -265,7 +265,7 @@ export class AppComponent implements OnInit {
 
 
 ## Issues
-If you have questions or issues feel free to create new an topic in [issues](https://github.com/Smip/ngx-materialize/issues).
+If you have questions or issues feel free to create new an topic in [issues](https://github.com/steinv/ngx-materialize/issues).
 
 ## License
 

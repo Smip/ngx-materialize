@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "@Smip/ngx-materialize": [
-        "dist/smip/ngx-materialize"
+      "@steinv/ngx-materialize": [
+        "dist/steinv/ngx-materialize"
       ],
-      "@Smip/ngx-materialize/*": [
-        "dist/smip/ngx-materialize/*"
+      "@steinv/ngx-materialize/*": [
+        "dist/steinv/ngx-materialize/*"
       ],
       "core-js/es7/reflect": [
         "node_modules/core-js/proposals/reflect-metadata"

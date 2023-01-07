@@ -13,7 +13,7 @@ MIT
 @angular/router
 MIT
 
-@smip/ngx-materialize
+@steinv/ngx-materialize
 MIT
 
 rxjs

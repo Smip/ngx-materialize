@@ -1,5 +1,5 @@
 {
-  "name": "@smip/ngx-materialize",
+  "name": "@steinv/ngx-materialize",
   "version": "0.4.0",
   "description": "One more materialize wrapper for Angular (forked from smip/ngx-materialize)",
   "keywords": [
@@ -22,11 +22,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Smip/ngx-materialize.git"
+    "url": "https://github.com/steinv/ngx-materialize.git"
   },
-  "homepage": "https://github.com/Smip/ngx-materialize",
+  "homepage": "https://github.com/steinv/ngx-materialize",
   "bugs": {
-    "url": "https://github.com/Smip/ngx-materialize/issues"
+    "url": "https://github.com/steinv/ngx-materialize/issues"
   },
   "dependencies": {
     "tslib": "^2.0.0"
