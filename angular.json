@@ -175,6 +175,5 @@
         }
       }
     }
-  },
-  "defaultProject": "ngx-materialize"
+  }
 }
