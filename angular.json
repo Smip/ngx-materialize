@@ -142,7 +142,7 @@
       "prefix": "m",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/smip/ngx-materialize/tsconfig.lib.json",
             "project": "projects/smip/ngx-materialize/ng-package.json"
@@ -175,5 +175,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "cf5b2823-1860-4db0-a3ac-d86edc392a2e"
   }
 }
